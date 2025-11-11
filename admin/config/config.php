@@ -6,7 +6,16 @@
     $db_name = getenv('DB_NAME') ?: 'dbperfume_new';
 
     // Kết nối
-    $mysqli = new mysqli($db_host, $db_user, $db_pass, $db_name);
+    $mysqli = mysqli_init();
+    
+    // Nếu là Azure (có DB_HOST trong env), sử dụng SSL
+    if (getenv('DB_HOST')) {
+        $mysqli->ssl_set(NULL, NULL, NULL, NULL, NULL);
+        $mysqli->real_connect($db_host, $db_user, $db_pass, $db_name, 3306, NULL, MYSQLI_CLIENT_SSL);
+    } else {
+        // Local connection không cần SSL
+        $mysqli = new mysqli($db_host, $db_user, $db_pass, $db_name);
+    }
 
     // Check connection
     if ($mysqli->connect_errno) {

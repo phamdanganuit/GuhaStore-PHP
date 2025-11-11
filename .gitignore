@@ -1,0 +1,39 @@
+# Composer dependencies
+/vendor/
+composer.lock
+
+# Environment variables
+.env
+.env.sh
+.env.local
+
+# Server logs
+server.log
+nohup.out
+*.log
+
+# IDE & Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Node modules (nếu có)
+node_modules/
+
+# Uploads (tùy chọn - nếu không muốn commit ảnh upload)
+# admin/modules/product/uploads/*
+# admin/modules/blog/uploads/*
+# admin/modules/category/uploads/*
+# admin/modules/brand/uploads/*
+
+# Temporary files
+*.tmp
+*.bak
+*.cache
+
+# OS files
+Thumbs.db
+.DS_Store
