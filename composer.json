@@ -1,5 +1,10 @@
 {
+    "name": "phamdanganuit/guhastore-php",
+    "description": "Hệ thống Quản lý Cửa hàng Nước hoa Guha Store (PHP thuần).",
+    "license": "proprietary",
     "require": {
-        "phpoffice/phpspreadsheet": "^1.29"
+        "phpmailer/phpmailer": "^6.9",
+        "phpoffice/phpspreadsheet": "^1.29",
+        "nesbot/carbon": "^2.71"
     }
 }
