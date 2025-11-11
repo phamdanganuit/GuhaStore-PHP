@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/87ad435b-b757-47cc-8c06-69cf5f268078/resourceGroups/GuhaStore-RG/providers/Microsoft.Web/sites/guhastore",
+    "appService.deploySubpath": "."
+}
